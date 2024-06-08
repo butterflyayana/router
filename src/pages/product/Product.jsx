@@ -1,9 +1,10 @@
+import Table from "../Table/Table"
 
 
 const Product = () => {
   return (
     <div>
-      <h2>Product</h2>
+      <h2><Table/></h2>
     </div>
   )
 }
