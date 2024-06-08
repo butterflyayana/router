@@ -18,7 +18,7 @@ export default function DenseTable() {
     fetch(`https://jsonplaceholder.typicode.com/users/${userId}`)
       .then(response => {
         if (!response.ok) {
-         throw new Error('User not found');
+         throw new Error;
         }
         return response.json();
       })

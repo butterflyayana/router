@@ -4,16 +4,15 @@ import { useParams } from 'react-router-dom';
 function UserDetail() {
   const { id } = useParams();
   const [user, setUser] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+
 
   useEffect(() => {
     fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
       .then(response => {
-        if (!response.ok) { throw new Error('Network response was not ok');}
+        if (!response.ok) { throw new Error}
         return response.json();
       })
-      .then(data => { setUser(data); setLoading(false); })
+      .then(data => { setUser(data); })
   }, [id]);
 
   if (!user) {

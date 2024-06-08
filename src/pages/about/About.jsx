@@ -4,7 +4,7 @@ import User from '../user/User'
 const About = () => {
   return (
     <div>
-      <User/>
+  
     </div>
   )
 }
